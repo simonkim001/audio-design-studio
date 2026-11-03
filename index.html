@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101513" />
+    <meta name="description" content="An AI assistant for audio design, acoustics, and sound visualization." />
+    <title>Audio Design Studio · AI Assistant</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="Audio Design Studio home">
+          <span class="brand-mark" aria-hidden="true">≈</span>
+          <span>Audio Design <span class="brand-light">Studio</span></span>
+        </a>
+        <span class="status"><span class="status-dot"></span> AI assistant</span>
+      </header>
+
+      <section class="workspace" aria-labelledby="page-title">
+        <div class="intro" id="intro">
+          <div class="eyebrow">YOUR SOUND DESIGN PARTNER</div>
+          <h1 id="page-title">Make room for<br /><span>better sound.</span></h1>
+          <p>Ask about acoustic treatment, audio design, sound visualization, or your next creative project.</p>
+          <div class="suggestions" aria-label="Suggested questions">
+            <button type="button" class="suggestion">How do I treat a small recording room?</button>
+            <button type="button" class="suggestion">Explain RT60 in simple terms</button>
+            <button type="button" class="suggestion">Help me plan a soundscape</button>
+          </div>
+        </div>
+
+        <section class="conversation" aria-label="Chat conversation">
+          <div id="messages" class="messages" aria-live="polite" aria-relevant="additions text"></div>
+          <form id="chat-form" class="composer">
+            <label class="visually-hidden" for="message-input">Message the assistant</label>
+            <textarea id="message-input" name="message" rows="1" maxlength="4000" placeholder="Ask anything about sound…" required></textarea>
+            <button id="send-button" class="send-button" type="submit" aria-label="Send message">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12 20 4l-5 16-3-7-8-1Zm8 1 8-9" /></svg>
+            </button>
+          </form>
+          <p class="disclaimer">AI can make mistakes. Check important technical and safety advice.</p>
+        </section>
+      </section>
+      <footer>Built for curious ears <span aria-hidden="true">·</span> Keep listening</footer>
+    </main>
+  </body>
+</html>
